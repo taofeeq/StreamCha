@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+ <title>How to get data from MySQL with AngularJS - PHP</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+ <script src = "keys.js"></script>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<style>
+#searchObjResults {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: gray;
+  margin-top: 20px;
+}
+</style>
+</head>
+<body ng-app="CombineModule">
+<nav class="navbar navbar-expand-lg navbar-dark navbar-nav " style="background-color: #444">
+        <a class="navbar-nav" href="Home.html"><img src="head.png" alt="logo-header" data-at2x="assets/img/head.png"> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="Home.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav nav-flex-icons">
+                <li class="nav-item">
+                    <a class="nav-link"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"><i class="fab fa-instagram"></i></a>
+                </li>
+            </ul>
+
+      <a href="Search.html">  <span class="glyphicon glyphicon-search"></span><i class="fas fa-search text-white ml-1 img" aria-hidden="true"></i></a>
+      </div>
+    </nav>
+<div ng-controller="userCtrl">
+<div class = "container;background-color:#ccc" style="margin-top:80px">
+<div class ="form-group" >
+<label>Search: <input ng-model="search.$" onkeyup = "myFunction(event)" ng-keyup="onKeyUp($event)"></label> <br><br>
+<label>Name only: <input ng-model="search.name" ng-keyup= "onKeyUp($event)" ></label><br/> <br>
+<label>Email only: <input ng-model="search.email" ng-keyup="onKeyUp($event)" ></label><br> <br>
+<label>Comments and Reviews: <input ng-model="search.Com" ng-keyup="onKeyUp($event)"></label><br>
+<br/>
+<button ng-controller="mainController" ng-click="reload()" class= "btn btn-primary">
+  Clear Search Results
+</button><br><br>
+</div>
+</div>
+<div ng-hide ="tester">
+<table ng-hide ="onKeyUpResult == ''" ng-show = "tt === '!8'"  id="searchObjResults" >
+<tr>
+ <th>Name</th>
+ <th>Email</th>
+ <th>Comments</th>
+</tr>
+<tr ng-repeat="user in users | filter:search:strict">
+ <td>{{user.name}}</td>
+ <td>{{user.email}}</td>
+ <td>{{user.Com}}</td>
+</tr>
+</table>
+</div>
+</div>
+<h1> Test </h1>
+<script src="jquery-3.2.1.min.js"></script>
+        <script src="jquery-migrate-3.0.0.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="jquery.backstretch.min.js"></script>
+        <script src="wow.min.js"></script>
+        <script src="retina-1.1.0.min.js"></script>
+        <script src="scripts.js"></script>
+</body>
+</html>

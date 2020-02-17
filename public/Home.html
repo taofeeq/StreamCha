@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset=utf-8 />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title> StreamCha </title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="react.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="chromeonly">
+<nav class="navbar navbar-expand-lg navbar-dark navbar-nav" style="background-color:#567" >
+        <a class="navbar-nav" href="Home.html"><img src="head.png" alt="logo-header" data-at2x="assets/img/head.png"> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="Home.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav nav-flex-icons">
+                <li class="nav-item">
+                    <a class="nav-link"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"><i class="fab fa-instagram"></i></a>
+                </li>
+            </ul>
+
+      <a href="Search.html">  <span class="glyphicon glyphicon-search"></span><i class="fas fa-search text-white ml-1 img" aria-hidden="true"></i></a>
+      </div>
+</nav>
+</header>
+
+<div class="container">
+<div class="container1">
+<div>
+<iframe width="600" height="445" src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1">
+</iframe>
+</div>
+<div class="container">
+<div class="message-box-container" id="root">
+</div>
+<form  method="post"  action="data.php" enctype="multipart/form-data" onsubmit="setTimeout(function() { window.location.reload(); }, 150)">
+<label>Name:</label><input type="text" id = "name" name="name" required placeholder="Enter your username"><br> 
+<label>E-mail:</label> <input type="text" id = "email" name="email" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" placeholder="JohnDoe@domain.com"><br>
+<label>Comments and Reviews:</label> <textarea id = "Com" name="Com" maxlength = '3000' rows ="4" cols = "40"> </textarea> <br>
+<button type="submit" name="submit" id= "submitLink" class= "btn btn-primary">Post</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<footer id="chromeonly" class="fixed-bottom">
+<nav class="navbar navbar-nav navbar-dark footer1" style="background-color:#567">
+</nav>
+</footer>
+
+</body>
+</html>

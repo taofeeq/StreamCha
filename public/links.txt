@@ -1,4 +1,0 @@
-https://medium.com/@fiqriismail/how-to-setup-apache-mysql-and-php-in-linux-subsystem-for-windows-10-e03e67afe6ee
-
-https://stackoverflow.com/questions/37239970/connect-to-mysql-server-without-sudo
-
